@@ -1,0 +1,38 @@
+{
+  "name": "@acme/db",
+  "version": "0.1.0",
+  "description": "Database schemas and models",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:check": "drizzle-kit check",
+    "db:studio": "drizzle-kit studio",
+    "typecheck": "tsc --noEmit"
+  },
+  "imports": {
+    "#db": "./src/db.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./utils": "./src/utils.ts"
+  },
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2",
+    "drizzle-orm": "^0.40.1",
+    "drizzle-zod": "^0.7.0",
+    "postgres": "3.4.5",
+    "slug": "^10.0.0",
+    "typeid-js": "^1.2.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^8.0.0",
+    "drizzle-kit": "^0.30.5",
+    "pg": "^8.14.1",
+    "typescript": "^5.8.2"
+  }
+}

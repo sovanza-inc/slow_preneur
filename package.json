@@ -1,0 +1,73 @@
+{
+  "name": "saas-ui-pro-nextjs-starter-kit",
+  "version": "1.1",
+  "description": "Production ready Next.js SaaS starter kit",
+  "repository": "git@github.com:saas-js/saas-ui-pro-nextjs-starter-kit.git",
+  "author": "Eelco Wiersma <eelco@saas-ui.dev>",
+  "license": "https://saas-ui.dev/license",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare": "husky",
+    "init:env": "turbo gen env",
+    "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter=web",
+    "storybook": "turbo run storybook",
+    "build:web": "turbo build --filter=web",
+    "build:storybook": "turbo run storybook:build",
+    "build:tokens": "chakra-cli tokens packages/ui-theme/src/index.ts",
+    "db:push": "turbo run db:push",
+    "db:generate": "turbo run db:generate",
+    "db:migrate": "turbo run db:migrate",
+    "db:studio": "turbo run db:studio",
+    "billing:sync": "turbo run billing:sync",
+    "clean:changelogs": "tsx scripts/clean-changelogs.ts",
+    "workspace:namespace": "tsx scripts/workspace.ts --namespace",
+    "clean": "turbo run clean",
+    "format:check": "prettier --check apps/** --check packages/**",
+    "format:write": "prettier --write apps/** --check packages/**",
+    "lint": "eslint .",
+    "lint:web": "eslint apps/web",
+    "lint:fix": "eslint . --cache --cache-location=node_modules/.cache/.eslintcache --fix",
+    "lint:staged": "lint-staged --allow-empty --config lint-staged.config.cjs"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@chakra-ui/cli": "^2.5.8",
+    "@changesets/cli": "^2.28.1",
+    "@eslint/js": "^9.22.0",
+    "@formatjs/cli": "^6.6.1",
+    "@ngneat/falso": "^7.3.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@turbo/gen": "^2.4.4",
+    "@types/node": "^22.14.0",
+    "eslint": "^9.22.0",
+    "eslint-config-next": "^15.2.3",
+    "eslint-config-prettier": "^10.1.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "pkg-types": "^2.1.0",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.19.3",
+    "turbo": "^2.4.4",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.27.0",
+    "vitest": "^3.0.9",
+    "yargs": "^17.7.2"
+  },
+  "resolutions": {
+    "@types/react": "^18.3.18",
+    "@types/node": "^22.14.0",
+    "prettier": "^3.4.2",
+    "react-is": "rc",
+    "@internationalized/date": "3.7.0"
+  },
+  "packageManager": "yarn@4.7.0",
+  "engines": {
+    "node": ">=20.14.0"
+  }
+}

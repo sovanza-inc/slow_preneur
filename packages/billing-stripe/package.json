@@ -1,0 +1,18 @@
+{
+  "name": "@acme/billing-stripe",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "listen": "stripe listen --forward-to localhost:3000/api/webhooks/stripe"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@acme/api": "workspace:*",
+    "stripe": "^17.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}

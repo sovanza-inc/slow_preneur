@@ -11,6 +11,7 @@ export const Logo = (props: FlexProps) => {
 
 export const LogoIcon = (props: HTMLChakraProps<'svg'>) => {
   return (
+    // logo
     <Box display="flex" justifyContent="center" alignItems="center" {...props}>
       <Image src="/img/onboarding/logo.png" alt="Logo" boxSize="4" />
     </Box>

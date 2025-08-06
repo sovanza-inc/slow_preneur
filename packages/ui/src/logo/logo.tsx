@@ -1,5 +1,4 @@
 import { Box, FlexProps, HTMLChakraProps, Image } from '@chakra-ui/react'
-import { SaasUIIcon } from '@saas-ui/assets'
 
 export const Logo = (props: FlexProps) => {
   return (
